@@ -37,7 +37,7 @@ get_study_files <- function(study_id, raw_data = FALSE)
 
   study_files_content <-  study_files %>% httr::content('parsed')
   study_files_tibble <-
-    purrr::map(study_files_content$studyFiles, dplyr::as_tibble) %>% dplyr::bind_rows()
+    purrr::map(study_files_content$study, dplyr::as_tibble) %>% dplyr::bind_rows()
 
   return(study_files_tibble)
 
