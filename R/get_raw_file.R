@@ -10,13 +10,13 @@ get_raw_file <- function(study_id, filename, outpath, overwrite=FALSE)
 {
   response <-
     httr::GET(
-      URLencode(paste0(BASE_URL,
+      paste0(BASE_URL,
         '/studies/',
         study_id,
         '/download/',URLencode(filename)),
       httr::add_headers(user_token = getOption('MTBLS_API_KEY'),
         Accept ='application/json',
-        `Content-Type`='application/json'))
+        `Content-Type`='application/json')
     )
 
   if (file.exists(file.path(outpath,filename)) && !overwrite) {
