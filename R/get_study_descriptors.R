@@ -1,14 +1,20 @@
 #' Get Study Descriptors
 #'
+#' Retrieve the study descriptors and annotation values for a publically available study
+#'
 #' @param study_id A character string of a valid MTBLS study id
 #' @return a `tibble` of study descriptors
 #' @export
+#' @examples
+#' \dontrun{
+#' get_study_descriptors('MTBLS375')
+#' }
 
 get_study_descriptors <- function(study_id)
 {
   study_dcpts <-
     httr::GET(
-      paste0(BASE_URL,
+      paste0(getOption('BASE_URL'),
              '/studies/',
              study_id,
              '/descriptors'),

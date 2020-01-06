@@ -10,8 +10,13 @@ get_study_meta(study_id)
 \item{study_id}{A character string of a valid MTBLS study id}
 }
 \value{
-a `tibble` of study meta data
+a \code{tibble} of study meta data
 }
 \description{
-Get Study Meta
+Retrieve the meta data for a  publically available study
+}
+\examples{
+\dontrun{
+get_study_meta('MTBLS375')
+}
 }

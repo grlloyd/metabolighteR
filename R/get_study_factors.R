@@ -1,14 +1,20 @@
 #' Get Study Factors
 #'
+#' Retrieve the study factors and annotation values for a publically available study
+#'
 #' @param study_id A character string of a valid MTBLS study id
 #' @return a `tibble` of study factors
 #' @export
+#' @examples
+#' \dontrun{
+#' get_study_factors('MTBLS375')
+#' }
 
 get_study_factors <- function(study_id)
 {
   study_fcts <-
     httr::GET(
-      paste0(BASE_URL,
+      paste0(getOption('BASE_URL'),
              '/studies/',
              study_id,
              '/factors'),

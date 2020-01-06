@@ -10,8 +10,14 @@ get_study_contacts(study_id)
 \item{study_id}{a character string of a valid MTBLS study id}
 }
 \value{
-a `tibble` of study contacts
+a \code{tibble} of study contacts
 }
 \description{
-Get Study Contacts
+Retrieve the contact details for a specified public study
+'
+}
+\examples{
+\dontrun{
+get_study_contacts('MTBLS375')
+}
 }

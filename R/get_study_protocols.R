@@ -1,14 +1,20 @@
 #' Get Study Protocols
 #'
+#' Retrieve the protocol information that has been deposited for a public study
+#'
 #' @param study_id A character string of a valid MTBLS study id
 #' @return a `tibble` of study protocols
 #' @export
+#' @examples
+#' \dontrun{
+#' get_study_protocols('MTBLS375')
+#' }
 
 get_study_protocols <- function(study_id)
 {
   study_protocols <-
     httr::GET(
-      paste0(BASE_URL,
+      paste0(getOption('BASE_URL'),
              '/studies/',
              study_id,
              '/protocols'),

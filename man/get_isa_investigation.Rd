@@ -4,6 +4,13 @@
 \alias{get_isa_investigation}
 \title{Get ISA Investigation File}
 \usage{
+get_isa_investigation(study_id)
+}
+\arguments{
+\item{study_id}{A character string of a valid MTBLS study id}
+}
+\value{
+the ISA-tab Investigation output
 get_isa_investigation(study_id, outpath, overwrite = FALSE)
 }
 \arguments{
@@ -12,7 +19,4 @@ get_isa_investigation(study_id, outpath, overwrite = FALSE)
 \item{outpath}{A character string of a filepath where the ISA Investigation `.txt` file will be saved to}
 
 \item{overwrite}{Default FALSE. Set to TRUE to overwrite an existing file.}
-}
-\description{
-Get ISA Investigation File
-}
+

@@ -13,5 +13,10 @@ get_study_desc(study_id)
 a character string of the study description
 }
 \description{
-Get Study Description
+Retrieve the abstract based description of a public study
+}
+\examples{
+\dontrun{
+get_study_desc('MTBLS375')
+}
 }

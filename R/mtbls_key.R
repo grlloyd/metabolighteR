@@ -11,14 +11,14 @@
 #'
 #' # If API Token is set in `.Renviron`
 #'
-#' set_api_token()
+#' mtbls_key()
 #'
 #' # If API Token is not set in `.Renviron`
 #'
-#' set_api_token(API_KEY = 'XXXX-0000-XXXX-0000')
+#' mtbls_key('XXXX-0000-XXXX-0000')
 #' }
 
-set_api_token <- function(API_KEY = NULL)
+mtbls_key <- function(API_KEY = NULL)
 {
   if (Sys.getenv('MTBLS_API_KEY') == "") {
     options('MTBLS_API_KEY' = API_KEY)

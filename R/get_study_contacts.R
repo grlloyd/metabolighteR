@@ -1,14 +1,20 @@
 #' Get Study Contacts
 #'
+#' Retrieve the contact details for a specified public study
+#' '
 #' @param study_id a character string of a valid MTBLS study id
 #' @return a `tibble` of study contacts
 #' @export
+#' @examples
+#' \dontrun{
+#' get_study_contacts('MTBLS375')
+#' }
 
 get_study_contacts <- function(study_id)
 {
   study_contacts <-
     httr::GET(
-      paste0(BASE_URL,
+      paste0(getOption('BASE_URL'),
              '/studies/',
              study_id,
              '/contacts'),
