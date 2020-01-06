@@ -11,6 +11,7 @@
 #' writeLines(isa_investigation_parse, con = paste0('outpath/ISA.txt'))
 #' }
 
+
 get_isa_investigation <- function(study_id)
 {
   isa_investigation <-

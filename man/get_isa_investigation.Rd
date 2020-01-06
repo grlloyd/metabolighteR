@@ -11,13 +11,12 @@ get_isa_investigation(study_id)
 }
 \value{
 the ISA-tab Investigation output
+get_isa_investigation(study_id, outpath, overwrite = FALSE)
 }
-\description{
-Retrieve the ISA Investigation for a specified Metabolights Study
-}
-\examples{
-\dontrun{
-ISA <- get_isa_investigation('MTBLS375')
-writeLines(isa_investigation_parse, con = paste0('outpath/ISA.txt'))
-}
-}
+\arguments{
+\item{study_id}{A character string of a valid MTBLS study id}
+
+\item{outpath}{A character string of a filepath where the ISA Investigation `.txt` file will be saved to}
+
+\item{overwrite}{Default FALSE. Set to TRUE to overwrite an existing file.}
+
